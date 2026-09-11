@@ -1,0 +1,340 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    background-color: #f4f7f6;
+    overflow-x: hidden;
+}
+
+.max-width {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+span { color: #2563eb; }
+
+/* Typography */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #111;
+    font-weight: 700;
+}
+
+/* Navigation */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: 0.3s;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo { font-size: 1.8rem; font-weight: 700; color: #111; }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: #111; font-weight: 600; transition: color 0.3s; }
+.nav-links a:hover { color: #2563eb; }
+
+/* Home Section */
+.home-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f0fdf4 0%, #e0f2fe 100%);
+    padding-top: 80px;
+}
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    width: 100%;
+}
+.home-text { flex: 1; }
+.home-text h3 { font-size: 1.5rem; color: #555; }
+.home-text h1 { font-size: 3.5rem; font-weight: 700; color: #111; margin: 10px 0; line-height: 1.2; }
+.subtitle { font-size: 1.3rem; font-weight: 600; color: #2563eb; margin-bottom: 1rem; }
+.bio-short { font-size: 1rem; color: #555; margin-bottom: 2rem; max-width: 500px; line-height: 1.6; }
+
+/* Buttons & Socials */
+.home-buttons { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #2563eb;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+}
+.btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4); }
+.btn-outline { background: transparent; border: 2px solid #2563eb; color: #2563eb; box-shadow: none; }
+.btn-outline:hover { background: #2563eb; color: #fff; }
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #111;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-decoration: none;
+    transition: 0.3s;
+}
+.social-icons a:hover { background: #2563eb; color: #fff; transform: translateY(-3px); }
+
+/* Home Image */
+.home-image { flex: 1; display: flex; justify-content: center; }
+.img-box {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #fff;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    animation: float 4s ease-in-out infinite;
+}
+.img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Sections & Grid */
+.section-container { padding: 100px 0; }
+.bg-light { background-color: #fff; }
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* About Section & Tabs */
+.about-content { padding: 2rem; background: #fff; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+.bio-main { line-height: 1.8; font-size: 1.05rem; color: #555; margin-bottom: 2rem; }
+.tab-titles { display: flex; gap: 2rem; margin-bottom: 2rem; flex-wrap: wrap; }
+.tab-links { font-weight: 600; cursor: pointer; position: relative; font-size: 1.1rem; color: #333; }
+.tab-links::after { content: ''; width: 0; height: 3px; background: #2563eb; position: absolute; left: 0; bottom: -6px; transition: 0.3s; }
+.tab-links.active-link::after { width: 100%; }
+.tab-contents { display: none; }
+.tab-contents.active-tab { display: block; animation: fadeIn 0.5s; }
+.tab-contents ul li { list-style: none; margin-bottom: 1.5rem; line-height: 1.5; color: #555; }
+.tab-contents ul li span { display: block; color: #2563eb; font-weight: 700; font-size: 1.15rem; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Cards */
+.card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+}
+.card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-color: #2563eb; }
+.card-icon { font-size: 3rem; color: #2563eb; margin-bottom: 1.5rem; }
+.card h3 { color: #111; margin-bottom: 0.5rem; font-size: 1.3rem; }
+.card h4 { margin-bottom: 1rem; color: #2563eb; font-weight: 600; font-size: 1rem; }
+.card p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+
+/* Animations */
+.hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s ease-out; }
+.show { opacity: 1; transform: translateY(0); }
+
+/* Contact Section Details */
+.contact-content {
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    background: #fff;
+    padding: 3.5rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+.contact-info { 
+    flex: 1; 
+    min-width: 300px; 
+}
+.contact-info h3 { 
+    font-size: 2rem; 
+    margin-bottom: 1rem; 
+    color: #111; 
+}
+.contact-info > p { 
+    color: #555; 
+    margin-bottom: 2.5rem; 
+    line-height: 1.7; 
+    font-size: 1rem; 
+}
+.info-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 1.5rem; 
+    margin-bottom: 1.8rem; 
+}
+.info-item i { 
+    font-size: 1.8rem; 
+    color: #2563eb; 
+}
+.info-item h4 { 
+    color: #111; 
+    margin-bottom: 0.2rem; 
+    font-size: 1.1rem; 
+}
+.info-item p { 
+    color: #666; 
+    font-size: 0.95rem; 
+}
+
+/* Form Styles */
+.contact-form { 
+    flex: 1; 
+    min-width: 300px; 
+}
+.contact-form form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5rem; 
+}
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    background: #f8fafc;
+}
+.contact-form input:focus, .contact-form textarea:focus { 
+    border-color: #2563eb; 
+    box-shadow: 0 0 10px rgba(37,99,235,0.15); 
+    background: #fff;
+}
+.contact-form button { 
+    border: none; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    width: max-content; 
+    font-size: 1rem;
+}
+
+/* =========================================
+   Premium Footer Styling
+========================================= */
+footer {
+    text-align: center;
+    padding: 2rem 5%;
+    width: 100%;
+    
+    /* Glassmorphism Effect to match the website */
+    background: rgba(255, 255, 255, 0.3) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 -8px 32px rgba(31, 38, 135, 0.05);
+    
+    color: #444; /* সফট ডার্ক গ্রে কালার, চোখে আরাম দিবে */
+    margin-top: 3rem;
+}
+
+footer p {
+    font-weight: 400; /* বোল্ড সরিয়ে রেগুলার করা হয়েছে */
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+footer p span {
+    color: #2563eb;
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .home-container { flex-direction: column; text-align: center; padding-top: 50px; }
+    .home-buttons { justify-content: center; }
+    .home-text h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+}
+
+/* =========================================
+   Premium Interactive & Glassmorphism UI
+========================================= */
+
+/* Particles Background Canvas */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 50%, #e0eafc 100%);
+}
+
+/* Remove solid background colors from sections */
+body, .home-section, .section-container, .bg-light {
+    background: transparent !important; 
+}
+
+/* Apply Glassmorphism (Frosted Glass Effect) to Cards and Boxes */
+.card, .about-content, .contact-content {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1) !important;
+    border-radius: 20px;
+}
+
+/* Make Navbar Glassmorphic */
+header {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Form Fields Glass Effect */
+.contact-form input, .contact-form textarea {
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.7) !important;
+    color: #111;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.8) !important;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+}

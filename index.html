@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD. Rashedul Islam | Professional Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Rashedul<span>.Ontor</span></h2>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section (Image Left, Text Right) -->
+    <section id="home" class="home-section">
+        <div class="home-container max-width">
+            
+            <!-- Image on the Left -->
+            <div class="home-image hidden">
+                <div class="img-box">
+                    <img src="profile.jpg" alt="MD. Rashedul Islam">
+                </div>
+            </div>
+
+            <!-- Text on the Right -->
+            <div class="home-text hidden">
+                <h3>Hello, Visitor. I'm </h3>
+                <h1>MD. Rashedul Islam</h1>
+                <p class="subtitle">I am a <span class="typing-text"></span></p>
+                <p class="bio-short">A passionate tech enthusiast and Android App Developer with over 5 years of educational leadership. Driven by a constant hunger to learn new technologies, I am currently building impactful mobile solutions while setting my sights on the future of AI and Machine Learning.</p>
+                <div class="home-buttons">
+                    <a href="#contact" class="btn">Get in Touch</a>
+                    <a href="#projects" class="btn btn-outline">My Projects</a>
+                </div>
+                
+                <!-- CLICKABLE SOCIAL ICONS -->
+                <div class="social-icons">
+                    <a href="https://github.com/RashedulOntor" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/rashedul-ontor/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/rashedulontor.2203/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://youtube.com/@dreamupacademy?si=OE_57jL-kwHeHXQW" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- About Section with Tabs -->
+    <section id="about" class="section-container bg-light">
+        <div class="max-width">
+            <h2 class="section-title hidden">About <span>Me</span></h2>
+            <div class="about-content hidden">
+                <p class="bio-main">
+                    Hello! I am a 3rd-year Computer Science and Engineering student at Brahmaputra International University, and I am a professional Android App Developer. Balancing my passion for technology with over five years of teaching experience. I am the Founder and CEO Of Dream Up Academy, also Co-Founder and Director of Prottoy Academy in Jamalpur. Please keep me in your prayers so that I can fulfill all my dreams.
+                </p>
+                
+                <!-- Clickable Tabs -->
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('education', event)">Education</p>
+                    <p class="tab-links" onclick="opentab('experience-tab', event)">Experience</p>
+                    <p class="tab-links" onclick="opentab('leadership', event)">Leadership</p>
+                </div>
+                
+                <!-- Tab Contents -->
+                <div class="tab-contents active-tab" id="education">
+                    <ul>
+                        <li><span>B.Sc. in CSE (3rd Year)</span><br>Brahmaputra International University</li>
+                        <li><span>Continuous Learner</span><br>Passionate about App Development, AI/ML and modern tech.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience-tab">
+                    <ul>
+                        <li><span>Founder & CEO</span><br> Dream Up Academy - A fast growing Education platform in Bangladesh for class 6 to 12 students.</li>
+                        <li><span>Co-Founder & Director</span><br>Prottoy Academy - Top leading Coaching centre in Jamalpur for class 6 to 10.</li>
+                        <li><span>Teaching Experience</span><br>Over 5 years of impactful teaching and mentoring in Math, Science & ICT.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="leadership">
+                    <ul>
+                        <li><span>Founder</span><br>RoktoJuddha - A leading top free BLOOD donating Society.</li>
+                        <li><span>General Secretary</span><br>Bondhujon (Jamalpur District) - Community service and youth leadership.</li>
+                        <li><span>Wing Leader (Football)</span><br> BRIU Sports Club.</li>
+                        <li><span>Program Co-Ordinator</span><br> BRIU Computer Club.</li>
+                        <li><span>Organizing Secretary</span><br> মানবতা ও আদর্শ সমাজ গঠনে আমরা - বাংলাদেশ (মেলান্দহ উপজেলা শাখা)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-container">
+        <div class="max-width">
+            <h2 class="section-title hidden">Leadership & <span>Experience</span></h2>
+            <div class="grid-container">
+                <div class="card hidden">
+                    <i class="fas fa-graduation-cap card-icon"></i>
+                    <h3>Founder & CEO</h3>
+                    <h4>Dream Up Academy</h4>
+                    <p>A fast Growing educational platform dedicated to quality learning and academic excellence in Bangladesh for class 6 to 12 students.</p>
+                </div>
+                <div class="card hidden">
+                    <i class="fas fa-school card-icon"></i>
+                    <h3>Director & Co-Founder</h3>
+                    <h4>Prottoy Academy</h4>
+                    <p>Leading Coaching Centre in Jamalpur focusing on specialized curriculum structure and student development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-container bg-light">
+        <div class="max-width">
+            <h2 class="section-title hidden">My GitHub <span>Projects</span></h2>
+            <div class="grid-container">
+                <div class="card hidden">
+                    <i class="fas fa-code-branch card-icon"></i>
+                    <h3>Student Management System</h3>
+                    <p>A dedicated project for Prottoy Academy to manage students, academic performance, and institutional data efficiently.</p>
+                    <br>
+                    <a href="https://github.com/RashedulOntor/prottoy_academy" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">View Project</a>
+                </div>
+                <div class="card hidden">
+                    <i class="fas fa-code-branch card-icon"></i>
+                    <h3>Digital Tasbhi</h3>
+                    <p>An Android application capable of tracking your daily jikir and ebadat seamlessly.</p>
+                    <br>
+                    <a href="https://github.com/RashedulOntor/digital_tasbhi" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">View Project</a>
+                </div>
+                <div class="card hidden">
+                    <i class="fas fa-code-branch card-icon"></i>
+                    <h3>The Hills Of Bangladesh</h3>
+                    <p>A static app providing detailed insights and information about the beautiful hills of Bangladesh.</p>
+                    <br>
+                    <a href="https://github.com/RashedulOntor/TheHillsofBangladesh" target="_blank" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section-container bg-light">
+        <div class="max-width">
+            <h2 class="section-title hidden">My <span>Achievements</span></h2>
+            <div class="grid-container">
+
+                <!-- Achievement 1: Sports -->
+                <div class="card hidden">
+                    <i class="fas fa-trophy card-icon"></i>
+                    <h3>Man of the Final</h3>
+                    <h4>BRIU EPL Championship -2025</h4>
+                    <p>Won the championship title with the team Error Blasters and earned the 'Man of the Final' award for outstanding athletic performance.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-container">
+        <div class="max-width">
+            <h2 class="section-title hidden">Let's <span>Connect</span></h2>
+            <div class="contact-content hidden">
+                
+                <!-- Left Side: Contact Information -->
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p>Feel free to reach out to me for app development, educational collaborations, or tech opportunities. You can drop a message or contact me directly via WhatsApp.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Present Address</h4>
+                            <p>Atabari, Bhabki Bazar, Melandha, Jamalpur, Bangladesh</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>rashedulontor@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+8801400148898</p>
+                        </div>
+                    </div>
+                    
+                    <!-- WhatsApp Chat Button -->
+                    
+                    <a href="https://wa.me/8801400148898" target="_blank" class="btn" style="margin-top: 15px;">
+                        <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                    </a>
+                </div>
+                
+                <!-- Right Side: Contact Form -->
+                <div class="contact-form">
+                    <!-- Formspree Action Link (Details Below) -->
+                    <form action="https://formspree.io/f/xeaqnvgv" method="POST">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message / Question" required></textarea>
+                        <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 <span>MD. Rashedul Islam</span>. All rights reserved.</p>
+    </footer>
+
+    <!-- Typed.js for Typing Effect -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
