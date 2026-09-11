@@ -338,3 +338,85 @@ header {
     background: rgba(255, 255, 255, 0.8) !important;
     box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
 }
+
+/* =========================================
+   Review Section Styling
+========================================= */
+.review-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+.review-box {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    transition: transform 0.3s;
+}
+.review-box:hover { transform: translateY(-5px); }
+.quote-icon { font-size: 2rem; color: #2563eb; margin-bottom: 1rem; opacity: 0.5; }
+.review-box p { font-style: italic; color: #555; margin-bottom: 1.5rem; line-height: 1.7; }
+.review-box h4 { color: #2563eb; text-align: right; font-weight: 600; }
+
+.drop-review {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+}
+.drop-review h3 { font-size: 2rem; margin-bottom: 0.5rem; color: #111; }
+.drop-review p { margin-bottom: 2rem; color: #666; }
+
+/* =========================================
+   Dark Mode Styling
+========================================= */
+#theme-toggle {
+    cursor: pointer;
+    font-size: 1.4rem;
+    color: #111;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+#theme-toggle:hover { color: #2563eb; }
+
+/* When Dark Mode is Active */
+.dark-theme {
+    background-color: #0f172a !important; /* Deep dark blue/slate */
+    color: #f8fafc;
+}
+.dark-theme #particles-js { background: #0f172a !important; }
+.dark-theme header {
+    background: rgba(15, 23, 42, 0.8) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-theme .navbar h2.logo, .dark-theme .nav-links a, .dark-theme #theme-toggle { color: #f8fafc; }
+.dark-theme .section-title, .dark-theme .contact-info h3, .dark-theme .drop-review h3 { color: #f8fafc; }
+.dark-theme .home-text h1, .dark-theme .home-text h3 { color: #f8fafc; }
+.dark-theme .bio-short, .dark-theme .bio-main, .dark-theme .contact-info > p, .dark-theme .drop-review p { color: #cbd5e1; }
+
+/* Dark Mode Cards & Glassmorphism */
+.dark-theme .card, .dark-theme .about-content, .dark-theme .contact-content, .dark-theme .review-box, .dark-theme .drop-review {
+    background: rgba(30, 41, 59, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+.dark-theme .card h3, .dark-theme .info-item h4 { color: #f8fafc; }
+.dark-theme .card p, .dark-theme .review-box p { color: #94a3b8; }
+.dark-theme .tab-links { color: #cbd5e1; }
+.dark-theme .tab-contents ul li { color: #cbd5e1; }
+
+/* Dark Mode Form */
+.dark-theme .contact-form input, .dark-theme .contact-form textarea {
+    background: rgba(15, 23, 42, 0.6) !important;
+    color: #f8fafc;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.dark-theme footer { background: rgba(15, 23, 42, 0.9) !important; }

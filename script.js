@@ -98,3 +98,30 @@ if (document.getElementById('particles-js')) {
         "retina_detect": true
     });
 }
+
+
+// 5. Dark/Light Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+// Check Local Storage for saved theme
+if(localStorage.getItem('theme') === 'dark'){
+    body.classList.add('dark-theme');
+    themeToggle.classList.remove('fa-moon');
+    themeToggle.classList.add('fa-sun'); // Change icon to sun
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    
+    // Save preference and change icon
+    if(body.classList.contains('dark-theme')){
+        localStorage.setItem('theme', 'dark');
+        themeToggle.classList.remove('fa-moon');
+        themeToggle.classList.add('fa-sun');
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeToggle.classList.remove('fa-sun');
+        themeToggle.classList.add('fa-moon');
+    }
+});

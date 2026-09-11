@@ -17,6 +17,8 @@
     <header>
         <nav class="navbar">
             <h2 class="logo">Rashedul<span>.Ontor</span></h2>
+            <!-- Dark Mode Toggle Icon -->
+                <li><i class="fas fa-moon" id="theme-toggle"></i></li>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
@@ -170,6 +172,39 @@
                     <p>Won the championship title with the team Error Blasters and earned the 'Man of the Final' award for outstanding athletic performance.</p>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews & Testimonials Section -->
+    <section id="reviews" class="section-container">
+        <div class="max-width">
+            <h2 class="section-title hidden">Student <span>Reviews</span></h2>
+            
+            <!-- Existing Reviews -->
+            <div class="review-container hidden">
+                <div class="review-box">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"The Math and ICT classes at Prottoy Academy in Bhabki Bazar completely changed my perspective on learning. The teaching method is outstanding!"</p>
+                    <h4>Fahia Farhana Jui- Class 09 Student</h4>
+                </div>
+                <div class="review-box">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p>"Dream Up Academy provided the best guidance for my ICT subjects. The dedication to student development here is highly recommended."</p>
+                    <h4>Asadul Islam - Class 12 Student</h4>
+                </div>
+            </div>
+            
+            <!-- Drop a Review Form -->
+            <div class="drop-review hidden">
+                <h3>Drop a Review</h3>
+                <p>Share your learning or working experience with me.</p>
+                <!-- Formspree link here (same as contact form) -->
+                <form action="https://formspree.io/f/xeaqnvgv" method="POST" class="contact-form" style="width: 100%;">
+                    <input type="text" name="Reviewer_Name" placeholder="Your Name / Designation" required>
+                    <textarea name="Review_Message" rows="4" placeholder="Write your review here..." required></textarea>
+                    <button type="submit" class="btn" style="margin: 0 auto;">Submit Review <i class="fas fa-star"></i></button>
+                </form>
             </div>
         </div>
     </section>
