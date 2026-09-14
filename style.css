@@ -44,12 +44,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 5%;
-    max-width: 1200px;
+    padding: 1.2rem 3%;
+    max-width: 1400px;
     margin: 0 auto;
 }
 .logo { font-size: 1.8rem; font-weight: 700; color: #111; }
-.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links { display: flex; list-style: none; gap: 1.5rem; }
+.nav-links li {
+    white-space: nowrap; 
+}
 .nav-links a { text-decoration: none; color: #111; font-weight: 600; transition: color 0.3s; }
 .nav-links a:hover { color: #2563eb; }
 
